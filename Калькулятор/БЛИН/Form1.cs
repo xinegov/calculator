@@ -24,14 +24,14 @@ namespace _1
             double a = double.Parse(textBox1.Text);
             double b = double.Parse(textBox2.Text);
 
-            double epsilon = 0.01; //Точность твоя и моя
+            double epsilon = 0.0000001; //Точность
 
             double poexala = BisectionMethod(a, b, epsilon);
             textBox4.Text = poexala.ToString();
         }
         public double Function(double x)
         {
-            return x * x - 5 * x + 4; //Уравнение твое, емае
+            return x * x * x - 5 * x + 4; //Уравнение
         }
 
         private double BisectionMethod(double a, double b, double epsilon)
